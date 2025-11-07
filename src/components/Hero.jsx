@@ -3,15 +3,17 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-28">
-      <div className="absolute inset-0">
-        {/* Replace with your own Spline scene URL if desired */}
+    <section className="relative isolate overflow-hidden pt-28 min-h-[80vh]">
+      {/* 3D background */}
+      <div className="absolute inset-0 z-0">
         <Spline scene="https://prod.spline.design/1tf5uYy1B5lRmk7m/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
+      {/* Soft gradient overlay to ensure text contrast; doesn't block interactions */}
+      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black via-black/60 to-black" />
 
-      <div className="relative mx-auto max-w-7xl px-4">
+      {/* Content */}
+      <div className="relative z-20 mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-10 py-24 md:grid-cols-2">
           <div className="text-left">
             <motion.h1
@@ -52,8 +54,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="relative"
           >
-            <div className="pointer-events-none absolute -inset-10 -z-0 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 blur-3xl" />
-            <div className="rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
+            <div className="pointer-events-none absolute -inset-10 z-0 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 blur-3xl" />
+            <div className="relative z-10 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
               <div className="grid grid-cols-3 gap-3">
                 {[
                   'AI Routing',
