@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative isolate overflow-hidden pt-28 min-h-[80vh]">
       {/* 3D background */}
       <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/1tf5uYy1B5lRmk7m/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/O-AdlP9lTPNz-i8a/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Soft gradient overlay to ensure text contrast; doesn't block interactions */}
